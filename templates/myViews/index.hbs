@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title>Weather</title>
+    <link rel="icon" href="/images/weather.png">
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+
+<body>
+    {{!-- <h1>Index File - hbs</h1>
+    <p>Created By Andrew Mead</p> --}}
+    {{!-- <h1>{{title}}</h1> --}}
+    {{!-- <p>{{name}}</p> --}}
+
+    <div class="main-content">
+        {{>header}}
+        <img class="portrait" src='/images/weatherImg.webp'>
+        <p>Use this site to get your weather!</p>
+
+        <form>
+            <input placeholder="Type the Location">
+            <button>Search</button>
+        </form>
+        <p id="msg-1"></p>
+        <p id="msg-2"></p>
+    </div>
+
+    {{>footer}}
+
+    <script src="/js/dynamicUserInteractionOrCSJS.js"></script>
+</body>
+
+</html>
