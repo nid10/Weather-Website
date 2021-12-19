@@ -227,13 +227,25 @@ expressServerApp.get('/fakeweather', (req, res) => {
     })
 })
 
+expressServerApp.get('/fakeabout', (req, res) => {
+    res.render('about', {
+        title: 'About Me',
+        name: 'Nidhi'
+    })
+})
 
+expressServerApp.get('/fakehelp', (req, res) => {
+    res.render('help', {
+        title: 'Help Page',
+        name: 'Nidhi'
+    })
+})
 
 // rending same template or .hbs page but with diff content
 expressServerApp.get('/fakehelp/*', (req, res) => {
     res.render('page404', {
         title: '404',
-        name: 'Andrew Mead',
+        name: 'Nidhi',
         errorMessage: 'Help Article not found'
     })
 })
@@ -241,7 +253,7 @@ expressServerApp.get('/fakehelp/*', (req, res) => {
 expressServerApp.get('*', (req, res) => {
     res.render('page404', {
         title: '404',
-        name: 'Andrew Mead',
+        name: 'Nidhi',
         errorMessage: 'Page not found'
     })
 })
