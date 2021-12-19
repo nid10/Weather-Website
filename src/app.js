@@ -201,7 +201,7 @@ hbs.registerPartials(partialsPath)
 expressServerApp.get('', (req, res) => {
     res.render('index', {
         title: 'Weather',
-        name: 'Andrew Mead'
+        name: 'Nidhi'
     })
 })
 
