@@ -54,8 +54,9 @@ formElement.addEventListener('submit', (e) => {
     if (!locationInInputEle) {
         return messageOne.textContent = 'provide a location as Input box is blank'
     }
-
-    fetch('http://localhost:2000/fakeweather?address=' + locationInInputEle).then((res) => {
+    // fetch('http://localhost:2000/fakeweather?address=' + locationInInputEle).then((res) => {
+    // fetch('/fakeweather?address=' + locationInInputEle).then((res) => { //domain will automa gets added
+    fetch('/fakeweather?address=' + locationInInputEle).then((res) => {
         res.json().then((data) => {
             if (data.error) {
                 return messageOne.textContent = 'pls provide the valid address'

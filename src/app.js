@@ -5,9 +5,10 @@ const geoCode = require('./utils/geoCode')
 const forecast = require('./utils/forecast')
 
 const expressServerApp = express()
+const port = process.env.PORT || 2000
 
-expressServerApp.listen(2000, () => {
-    console.log('Server is Up on port 2000');
+expressServerApp.listen(port, () => {
+    console.log('Server is Up on port ' + port);
 })
 
 // localhost:4000       -> root route
